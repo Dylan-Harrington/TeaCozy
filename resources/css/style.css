@@ -9,6 +9,10 @@ header {
   justify-content: flex-end;
   font-family: helvetica, sans-serif;
   border-bottom: 1px solid seashell;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 header img {
@@ -24,15 +28,25 @@ header li {
   padding: 0 15px;
 }
 
+header ul {
+  padding-right: 20px;
+}
+
+header a {
+  color: seashell;
+}
+
 /* this is the main content of the page*/
 
 .main {
   background-color: black;
   color: seashell;
   font-family: helvetica, sans-serif;
+  font-size: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 69px;
 }
 
 .page_third {
@@ -59,11 +73,11 @@ header li {
   align-items: center;
 }
 
-#mission_bar h1 {
+#mission_bar h2 {
   margin-bottom: 5px;
 }
 
-#mission_bar h2 {
+#mission_bar h4 {
   margin-top: 5px;
 }
 
@@ -77,7 +91,12 @@ header li {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
+}
 
+.featured_tea h2 {
+  margin: 80px 0 0 0;
+  padding-bottom: 0;
 }
 
 .small_image {
@@ -92,15 +111,31 @@ header li {
   height: 200px;
 }
 
-.featured_tea h1 {
-  margin: 100px 0 5px 0;
+
+.small_image h4 {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.row.bottom .small_image h4 {
+  margin-bottom: 10px;
 }
 
 /* this is the locations section */
 
+#location_title {
+  position: relative;
+  top: 140px;
+  margin-top: 0px;
+
+}
+
 .locations {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-4/img-locations-background.jpg);
-  height: 500px;
+  height:550px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #location_row {
@@ -114,4 +149,39 @@ header li {
   width: 300px;
   margin: 0 20px;
   align-items: center;
+}
+
+.locations h2 {
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+}
+
+.location_box h3 {
+  margin-bottom: 15px;
+}
+
+/* This is the footer */
+
+footer {
+  background-color: black;
+  color: seashell;
+  font-family: helvetica, sans-serif;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+}
+
+#contact_info h5 {
+  margin: 20px;
+}
+
+#copyright h5 {
+  padding-left: 20px;
 }
